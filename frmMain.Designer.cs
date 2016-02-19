@@ -87,6 +87,7 @@ namespace LOIC
             this.label8 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -211,7 +212,6 @@ namespace LOIC
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.chkWaitReply);
@@ -222,6 +222,7 @@ namespace LOIC
             this.groupBox3.Controls.Add(this.cbMethod);
             this.groupBox3.Controls.Add(this.txtPort);
             this.groupBox3.Controls.Add(this.tbSpeed);
+            this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.ForeColor = System.Drawing.Color.LightBlue;
             this.groupBox3.Location = new System.Drawing.Point(212, 253);
             this.groupBox3.Name = "groupBox3";
@@ -238,7 +239,7 @@ namespace LOIC
             this.chkAllowGzip.Name = "chkAllowGzip";
             this.chkAllowGzip.Size = new System.Drawing.Size(114, 18);
             this.chkAllowGzip.TabIndex = 29;
-            this.chkAllowGzip.Text = "Use Gzip (HTTP)";
+            this.chkAllowGzip.Text = "Gzipを使う";
             this.TTip.SetToolTip(this.chkAllowGzip, "Enable Gzip support for HTTP method");
             // 
             // label18
@@ -247,7 +248,7 @@ namespace LOIC
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(124, 16);
             this.label18.TabIndex = 25;
-            this.label18.Text = "TCP / UDP message";
+            this.label18.Text = "送信するメッセージ";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // chkAllowRandom
@@ -267,16 +268,16 @@ namespace LOIC
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(89, 17);
             this.label17.TabIndex = 24;
-            this.label17.Text = "HTTP Subsite";
+            this.label17.Text = "HTTP サブサイト";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
             this.label9.Location = new System.Drawing.Point(573, 106);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 15);
+            this.label9.Size = new System.Drawing.Size(50, 27);
             this.label9.TabIndex = 23;
-            this.label9.Text = "Timeout";
+            this.label9.Text = "タイム\r\nアウト";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
@@ -285,16 +286,16 @@ namespace LOIC
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 15);
             this.label7.TabIndex = 22;
-            this.label7.Text = "Threads";
+            this.label7.Text = "スレッド数";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
             this.label4.Location = new System.Drawing.Point(370, 107);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 15);
+            this.label4.Size = new System.Drawing.Size(75, 26);
             this.label4.TabIndex = 21;
-            this.label4.Text = "Method";
+            this.label4.Text = "プロトコルの\r\n方法";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
@@ -303,7 +304,7 @@ namespace LOIC
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 15);
             this.label6.TabIndex = 20;
-            this.label6.Text = "Port";
+            this.label6.Text = "ポート";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label20
@@ -322,9 +323,9 @@ namespace LOIC
             this.chkWaitReply.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkWaitReply.Location = new System.Drawing.Point(640, 77);
             this.chkWaitReply.Name = "chkWaitReply";
-            this.chkWaitReply.Size = new System.Drawing.Size(91, 18);
+            this.chkWaitReply.Size = new System.Drawing.Size(80, 18);
             this.chkWaitReply.TabIndex = 7;
-            this.chkWaitReply.Text = "Wait for reply";
+            this.chkWaitReply.Text = "応答を待つ";
             this.TTip.SetToolTip(this.chkWaitReply, "Don\'t disconnect before the server\'s started to answer");
             this.chkWaitReply.UseVisualStyleBackColor = true;
             // 
@@ -512,7 +513,7 @@ namespace LOIC
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(101, 24);
             this.label22.TabIndex = 22;
-            this.label22.Text = "Failed";
+            this.label22.Text = "失敗";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label23
@@ -521,7 +522,7 @@ namespace LOIC
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(101, 24);
             this.label23.TabIndex = 21;
-            this.label23.Text = "Requested";
+            this.label23.Text = "リクエスト済み";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbDownloaded
@@ -576,7 +577,7 @@ namespace LOIC
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(101, 24);
             this.label12.TabIndex = 15;
-            this.label12.Text = "Downloaded";
+            this.label12.Text = "ダウンロード済み";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label13
@@ -585,7 +586,7 @@ namespace LOIC
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(101, 24);
             this.label13.TabIndex = 14;
-            this.label13.Text = "Downloading";
+            this.label13.Text = "ダウンロード中";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
@@ -594,7 +595,7 @@ namespace LOIC
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(101, 24);
             this.label14.TabIndex = 13;
-            this.label14.Text = "Requesting";
+            this.label14.Text = "リクエスト中";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label15
@@ -603,7 +604,7 @@ namespace LOIC
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(101, 24);
             this.label15.TabIndex = 12;
-            this.label15.Text = "Connecting";
+            this.label15.Text = "接続中";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label16
@@ -612,18 +613,20 @@ namespace LOIC
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(101, 24);
             this.label16.TabIndex = 11;
-            this.label16.Text = "Idle";
+            this.label16.Text = "アイドル";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(22, 452);
+            this.label24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label24.Location = new System.Drawing.Point(22, 400);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(165, 14);
+            this.label24.Size = new System.Drawing.Size(165, 28);
             this.label24.TabIndex = 14;
-            this.label24.Text = "github.com/NewEraCracker/LOIC";
-            this.TTip.SetToolTip(this.label24, "Go to official page");
+            this.label24.Text = "原版\r\ngithub.com/NewEraCracker/LOIC";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TTip.SetToolTip(this.label24, "公式サイト");
             this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
             // enableHive
@@ -706,7 +709,7 @@ namespace LOIC
             this.pBanner.Image = global::LOIC.Properties.Resources.LOIC;
             this.pBanner.Location = new System.Drawing.Point(12, 12);
             this.pBanner.Name = "pBanner";
-            this.pBanner.Size = new System.Drawing.Size(184, 462);
+            this.pBanner.Size = new System.Drawing.Size(184, 377);
             this.pBanner.TabIndex = 12;
             this.pBanner.TabStop = false;
             // 
@@ -740,12 +743,26 @@ namespace LOIC
             this.label27.Text = "Channel";
             this.label27.Visible = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Location = new System.Drawing.Point(1, 432);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(211, 28);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "日本語版\r\ngithub.com/521kei/LOIC-Japanese-Version";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TTip.SetToolTip(this.label3, "日本語版の公式サイト");
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(24)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(982, 486);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label8);
@@ -844,5 +861,6 @@ namespace LOIC
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label3;
     }
 }

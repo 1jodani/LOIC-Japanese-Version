@@ -567,6 +567,11 @@ namespace LOIC
 
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/521kei/LOIC-Japanese-Version");
+        }
+
         private void cmdTargetIP_Click(object sender, EventArgs e)
 		{
 			LockOnIP(false);
