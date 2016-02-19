@@ -1,0 +1,5 @@
+C:\Users\浩太郎\Desktop\LOIC-master (1)\LOIC-master\bin\Debug\IRC.dll
+C:\Users\浩太郎\Desktop\LOIC-master (1)\LOIC-master\bin\Debug\IRC.pdb
+C:\Users\浩太郎\Desktop\LOIC-master (1)\LOIC-master\IRC\obj\Debug\IRC.csprojResolveAssemblyReference.cache
+C:\Users\浩太郎\Desktop\LOIC-master (1)\LOIC-master\IRC\obj\Debug\IRC.dll
+C:\Users\浩太郎\Desktop\LOIC-master (1)\LOIC-master\IRC\obj\Debug\IRC.pdb
