@@ -16,7 +16,7 @@ Low Orbit Ion Cannon(LOIC)はオープンソースのネットワーク負荷試
 
 ## Windowsでの実行方法
 
-バイナリファイルを入手してくいださい
+LOIC.exeを実行してください
 
 このソフトにはMicrosoft .NET Framework 3.5 Service Pack 1が必要です ダウンロードはこちら:
 http://www.microsoft.com/downloads/en/details.aspx?FamilyID=ab99342f-5d1a-413d-8319-81da479ab0d7&displaylang=en
