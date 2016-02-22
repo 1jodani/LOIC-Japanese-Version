@@ -18,3 +18,12 @@ C:\Users\浩太郎\Source\Repos\LOIC-Japanese-Version\obj\Debug\LOIC.frmMain.res
 C:\Users\浩太郎\Source\Repos\LOIC-Japanese-Version\obj\Debug\LOIC.frmWtf.resources
 C:\Users\浩太郎\Source\Repos\LOIC-Japanese-Version\obj\Debug\LOIC.Properties.Resources.resources
 C:\Users\浩太郎\Source\Repos\LOIC-Japanese-Version\obj\Debug\LOIC.csproj.GenerateResource.Cache
+C:\Users\浩太郎\Documents\GitHub\LOIC-Japanese-Version\obj\Debug\LOIC.exe
+C:\Users\浩太郎\Documents\GitHub\LOIC-Japanese-Version\obj\Debug\LOIC.pdb
+C:\Users\浩太郎\Documents\GitHub\LOIC-Japanese-Version\bin\Debug\LOIC.exe
+C:\Users\浩太郎\Documents\GitHub\LOIC-Japanese-Version\bin\Debug\LOIC.pdb
+C:\Users\浩太郎\Documents\GitHub\LOIC-Japanese-Version\bin\Debug\IRC.pdb
+C:\Users\浩太郎\Documents\GitHub\LOIC-Japanese-Version\obj\Debug\LOIC.csprojResolveAssemblyReference.cache
+C:\Users\浩太郎\Documents\GitHub\LOIC-Japanese-Version\obj\Debug\LOIC.frmMain.resources
+C:\Users\浩太郎\Documents\GitHub\LOIC-Japanese-Version\obj\Debug\LOIC.Properties.Resources.resources
+C:\Users\浩太郎\Documents\GitHub\LOIC-Japanese-Version\obj\Debug\LOIC.csproj.GenerateResource.Cache

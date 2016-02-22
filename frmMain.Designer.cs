@@ -45,7 +45,6 @@ namespace LOIC
             this.label17 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.chkWaitReply = new System.Windows.Forms.CheckBox();
@@ -56,6 +55,7 @@ namespace LOIC
             this.cbMethod = new System.Windows.Forms.ComboBox();
             this.txtPort = new System.Windows.Forms.TextBox();
             this.tbSpeed = new System.Windows.Forms.TrackBar();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cmdAttack = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -77,6 +77,7 @@ namespace LOIC
             this.TTip = new System.Windows.Forms.ToolTip(this.components);
             this.label24 = new System.Windows.Forms.Label();
             this.enableHive = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
             this.tShowStats = new System.Windows.Forms.Timer(this.components);
             this.disableHive = new System.Windows.Forms.RadioButton();
             this.label25 = new System.Windows.Forms.Label();
@@ -87,7 +88,6 @@ namespace LOIC
             this.label8 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -143,7 +143,7 @@ namespace LOIC
             this.txtTargetIP.Name = "txtTargetIP";
             this.txtTargetIP.Size = new System.Drawing.Size(365, 20);
             this.txtTargetIP.TabIndex = 3;
-            this.TTip.SetToolTip(this.txtTargetIP, "If you know your target\'s IP, enter the IP here and click \"Lock on\"");
+            this.TTip.SetToolTip(this.txtTargetIP, "ターゲットのIPアドレスがわかっている場合はIPアドレスを入力して\"ロックオン\"をクリックしてください");
             // 
             // label1
             // 
@@ -175,7 +175,7 @@ namespace LOIC
             this.txtTargetURL.Name = "txtTargetURL";
             this.txtTargetURL.Size = new System.Drawing.Size(365, 20);
             this.txtTargetURL.TabIndex = 1;
-            this.TTip.SetToolTip(this.txtTargetURL, "If you don\'t know your target\'s IP, enter a URL here and click \"Lock on\"");
+            this.TTip.SetToolTip(this.txtTargetURL, "IPがわからない場合はこちらにURLを入力して\"ロックオン\"をクリックしてください");
             // 
             // groupBox2
             // 
@@ -201,7 +201,7 @@ namespace LOIC
             this.txtTarget.TabStop = false;
             this.txtTarget.Text = "選択されていません！";
             this.txtTarget.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TTip.SetToolTip(this.txtTarget, "The currently selected target");
+            this.TTip.SetToolTip(this.txtTarget, "選択された攻撃先です");
             this.txtTarget.Enter += new System.EventHandler(this.txtTarget_Enter);
             // 
             // groupBox3
@@ -289,15 +289,6 @@ namespace LOIC
             this.label7.Text = "スレッド数";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(370, 107);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 26);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "プロトコルの\r\n方法";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label6
             // 
             this.label6.Location = new System.Drawing.Point(451, 106);
@@ -341,7 +332,7 @@ namespace LOIC
             this.txtData.TabIndex = 3;
             this.txtData.Text = "Attack!";
             this.txtData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TTip.SetToolTip(this.txtData, "The data to send in TCP/UDP mode");
+            this.TTip.SetToolTip(this.txtData, "TCP/UDPモードで送信するデータを入力してください");
             // 
             // txtSubsite
             // 
@@ -355,7 +346,7 @@ namespace LOIC
             this.txtSubsite.TabIndex = 2;
             this.txtSubsite.Text = "/";
             this.txtSubsite.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TTip.SetToolTip(this.txtSubsite, "What subsite to target (when using HTTP as type)");
+            this.TTip.SetToolTip(this.txtSubsite, "ターゲットのサブサイトを教えてください(HTTPモードの時のオプションです)");
             // 
             // txtTimeout
             // 
@@ -369,7 +360,7 @@ namespace LOIC
             this.txtTimeout.TabIndex = 1;
             this.txtTimeout.Text = "9001";
             this.txtTimeout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TTip.SetToolTip(this.txtTimeout, "Max time to wait for a response");
+            this.TTip.SetToolTip(this.txtTimeout, "responseを待つ時間を入力してください。");
             // 
             // txtThreads
             // 
@@ -383,7 +374,7 @@ namespace LOIC
             this.txtThreads.TabIndex = 6;
             this.txtThreads.Text = "10";
             this.txtThreads.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TTip.SetToolTip(this.txtThreads, "How many users LOIC should emulate");
+            this.TTip.SetToolTip(this.txtThreads, "LOICのスレッド数を教えてください");
             // 
             // cbMethod
             // 
@@ -401,7 +392,7 @@ namespace LOIC
             this.cbMethod.Size = new System.Drawing.Size(75, 22);
             this.cbMethod.TabIndex = 5;
             this.cbMethod.Text = "TCP";
-            this.TTip.SetToolTip(this.cbMethod, "What type of attack to launch");
+            this.TTip.SetToolTip(this.cbMethod, "攻撃の際に使用するタイプを教えてください");
             // 
             // txtPort
             // 
@@ -415,7 +406,7 @@ namespace LOIC
             this.txtPort.TabIndex = 4;
             this.txtPort.Text = "80";
             this.txtPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TTip.SetToolTip(this.txtPort, "What port to attack (regular websites use 80)");
+            this.TTip.SetToolTip(this.txtPort, "攻撃するポートを教えてください (ほとんどのサイトではPort:80が使用されています)");
             // 
             // tbSpeed
             // 
@@ -427,6 +418,15 @@ namespace LOIC
             this.TTip.SetToolTip(this.tbSpeed, "Use this to increase or reduce attack speed");
             this.tbSpeed.Scroll += new System.EventHandler(this.tbSpeed_Scroll);
             this.tbSpeed.ValueChanged += new System.EventHandler(this.tbSpeed_ValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(370, 107);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 26);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "プロトコルの\r\n方法";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox4
             // 
@@ -449,7 +449,7 @@ namespace LOIC
             this.cmdAttack.Size = new System.Drawing.Size(246, 50);
             this.cmdAttack.TabIndex = 1;
             this.cmdAttack.Text = "攻撃を開始！";
-            this.TTip.SetToolTip(this.cmdAttack, "I sincerely hope you can guess what this button does.");
+            this.TTip.SetToolTip(this.cmdAttack, "このボタンをクリックすると攻撃を開始します");
             this.cmdAttack.UseVisualStyleBackColor = false;
             this.cmdAttack.Click += new System.EventHandler(this.cmdAttack_Click);
             // 
@@ -642,6 +642,19 @@ namespace LOIC
             this.enableHive.Visible = false;
             this.enableHive.CheckedChanged += new System.EventHandler(this.enableHive_CheckedChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Location = new System.Drawing.Point(1, 432);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(211, 28);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "日本語版\r\ngithub.com/521kei/LOIC-Japanese-Version";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TTip.SetToolTip(this.label3, "日本語版の公式サイト");
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // tShowStats
             // 
             this.tShowStats.Interval = 10;
@@ -742,19 +755,6 @@ namespace LOIC
             this.label27.TabIndex = 23;
             this.label27.Text = "Channel";
             this.label27.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Location = new System.Drawing.Point(1, 432);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 28);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "日本語版\r\ngithub.com/521kei/LOIC-Japanese-Version";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.TTip.SetToolTip(this.label3, "日本語版の公式サイト");
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // frmMain
             // 

@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("Low Orbit Ion Cannon-Japanese Version")]
 [assembly: AssemblyCopyright("Public domain")]
 
-[assembly: System.Resources.NeutralResourcesLanguage("en-US")]
+[assembly: System.Resources.NeutralResourcesLanguage("ja-JP")]
 
 [assembly: System.CLSCompliant(true)]
 [assembly: ComVisible(false)]

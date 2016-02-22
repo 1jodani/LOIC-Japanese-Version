@@ -90,9 +90,9 @@ namespace LOIC
 				catch (Exception ex)
 				{
 					if(silent) return;
-					new frmWtf().Show(); MessageBox.Show(ex.Message, "What the shit."); return;
+					MessageBox.Show(ex.Message, "エラー"); return;
 				}
-				cmdAttack.Text = "Stop flooding";
+				cmdAttack.Text = "攻撃を停止";
 
 				if(String.Equals(sMethod, "TCP") || String.Equals(sMethod, "UDP"))
 				{
@@ -139,8 +139,7 @@ namespace LOIC
 			if(txtTargetIP.Text.Length == 0)
 			{
 				if(silent) return;
-				new frmWtf().Show();
-				MessageBox.Show("I think you forgot the IP.", "What the shit.");
+				MessageBox.Show("私はあなたがIPを忘れてしまったと思います", "エラー");
 				return;
 			}
 			txtTarget.Text = txtTargetIP.Text;
@@ -152,8 +151,7 @@ namespace LOIC
 			if( String.IsNullOrEmpty(sHost) )
 			{
 				if(silent) return;
-				new frmWtf().Show();
-				MessageBox.Show("A URL is fine too...", "What the shit.");
+				MessageBox.Show("URLが入力されていません", "エラー");
 				return;
 			}
 			if( !sHost.StartsWith("http://") && !sHost.StartsWith("https://") ) sHost = String.Concat("http://", sHost);
@@ -161,8 +159,7 @@ namespace LOIC
 			catch
 			{
 				if(silent) return;
-				new frmWtf().Show();
-				MessageBox.Show("The URL you entered does not resolve to an IP!", "What the shit.");
+				MessageBox.Show("IPアドレスを確認できませんでした。", "エラー");
 				return;
 			}
 		}
@@ -182,8 +179,7 @@ namespace LOIC
 				}
 				if(disableHive.Checked && enabled)
 				{
-					new frmWtf().Show();
-					MessageBox.Show("Did you filled IRC options correctly?", "What the shit.");
+                    MessageBox.Show("Did you filled IRC options correctly?", "What the shit.");
 					return;
 				}
 
